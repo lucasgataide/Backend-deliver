@@ -23,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		/*libera acesso da aplicação para gerenciar o banco de dados de testes h2 */
+		/*libera acesso da aplicação para gerenciar o banco de dados de testes h2 */ 
 		if (Arrays.asList(env.getActiveProfiles()).contains("test")) {
 			http.headers().frameOptions().disable();
 		}
